@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dra. Daniela Lima – Dentista em Santa Bárbara d'Oeste especializada em clareamento dental, implantes e ortodontia. Agende sua consulta e transforme seu sorriso com tecnologia e cuidado personalizado." />
+  <meta name="keywords" content="dentista Santa Bárbara d'Oeste, odontologia SBO, clareamento dental SBO, implante dentário Santa Bárbara, ortodontia SBO, Dra. Daniela Lima" />
+  <meta name="author" content="Dra. Daniela Lima Odontologia" />
+  <meta property="og:title" content="Dra. Daniela Lima | Odontologia Especializada em Santa Bárbara d'Oeste" />
+  <meta property="og:description" content="Transforme seu sorriso com excelência odontológica em Santa Bárbara d'Oeste. Clareamento, implantes e ortodontia com tecnologia de ponta." />
+  <meta property="og:type" content="website" />
+  <title>Dra. Daniela Lima | Odontologia Especializada em SBO</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #334155; background: #ffffff; }
+
+    /* Fade-in animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-delay-1 { transition-delay: 0.1s; }
+    .fade-delay-2 { transition-delay: 0.22s; }
+    .fade-delay-3 { transition-delay: 0.34s; }
+
+    /* Hero */
+    .hero-bg {
+      background-image: linear-gradient(to bottom, rgba(5,15,30,0.62) 0%, rgba(5,15,30,0.38) 60%, rgba(5,15,30,0.6) 100%),
+        url('https://images.unsplash.com/photo-1629904853716-f0bc54cca481?q=80&w=1200');
+      background-size: cover;
+      background-position: center top;
+    }
+
+    /* WhatsApp button pulse */
+    @keyframes wa-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+    }
+    .wa-float { animation: wa-pulse 2.4s ease-in-out infinite; }
+
+    /* Card hover */
+    .proc-card { transition: transform 0.28s ease, box-shadow 0.28s ease; }
+    .proc-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(14,165,233,0.12); }
+
+    /* Nav scroll effect */
+    .nav-scrolled { background: rgba(255,255,255,0.97) !important; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+
+    /* Section divider accent */
+    .accent-line::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: #0ea5e9;
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    /* Testimonial stars */
+    .stars::before { content: '★★★★★'; color: #f59e0b; letter-spacing: 2px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up { opacity: 1; transform: none; transition: none; }
+      .wa-float { animation: none; }
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ══════════════════════ NAV ══════════════════════ -->
+  <header id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <svg class="w-7 h-7 text-[#0ea5e9]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+        </svg>
+        <span class="font-display font-600 text-white text-lg leading-tight">Dra. Daniela <span class="text-[#0ea5e9]">Lima</span></span>
+      </div>
+      <a href="#whatsapp"
+        class="hidden sm:inline-flex items-center gap-2 bg-[#0ea5e9] hover:bg-[#0284c7] text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-200">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Agendar Consulta
+      </a>
+    </div>
+  </header>
+
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section class="hero-bg min-h-screen flex items-center justify-center text-white px-5">
+    <div class="max-w-3xl mx-auto text-center pt-20 pb-12">
+      <p class="text-[#7dd3fc] text-sm font-medium tracking-widest uppercase mb-4 fade-up">Santa Bárbara d'Oeste · SP</p>
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 fade-up fade-delay-1">
+        Dra. Daniela Lima<br/>
+        <span class="text-[#38bdf8]">Excelência em Odontologia</span><br/>
+        <span class="text-3xl sm:text-4xl font-normal">em SBO</span>
+      </h1>
+      <p class="text-white/80 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed fade-up fade-delay-2">
+        Tecnologia avançada, cuidado humanizado e resultados que transformam sorrisos e restauram confiança.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center fade-up fade-delay-3">
+        <a id="whatsapp" href="https://wa.me/5519999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Daniela" target="_blank" rel="noopener"
+          class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg transition-all duration-200 hover:scale-105">
+          <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Agendar via WhatsApp
+        </a>
+        <a href="#procedimentos" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 font-medium text-base px-7 py-4 rounded-full backdrop-blur-sm transition-all duration-200">
+          Ver Procedimentos
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+      </div>
+
+      <!-- Stats ribbon -->
+      <div class="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto fade-up">
+        <div class="text-center">
+          <p class="font-display text-3xl font-bold text-[#38bdf8]">12+</p>
+          <p class="text-white/70 text-xs mt-1 leading-tight">Anos de<br/>Experiência</p>
+        </div>
+        <div class="text-center border-x border-white/20">
+          <p class="font-display text-3xl font-bold text-[#38bdf8]">3.000+</p>
+          <p class="text-white/70 text-xs mt-1 leading-tight">Pacientes<br/>Atendidos</p>
+        </div>
+        <div class="text-center">
+          <p class="font-display text-3xl font-bold text-[#38bdf8]">100%</p>
+          <p class="text-white/70 text-xs mt-1 leading-tight">Satisfação<br/>Garantida</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ TRUST BAR ══════════════════════ -->
+  <div class="bg-[#f0f9ff] border-y border-[#bae6fd] py-5 px-5 fade-up">
+    <div class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-6 sm:gap-10 text-[#0284c7] text-sm font-medium">
+      <span class="flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        CRO-SP Registrada
+      </span>
+      <span class="flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        Equipamentos de última geração
+      </span>
+      <span class="flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Santa Bárbara d'Oeste, SP
+      </span>
+      <span class="flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Atendimento Segunda a Sábado
+      </span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ PROCEDIMENTOS ══════════════════════ -->
+  <section id="procedimentos" class="py-20 px-5 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 fade-up">
+        <p class="text-[#0ea5e9] text-sm font-semibold tracking-widest uppercase mb-2">Especialidades</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-[#0f172a] accent-line">Procedimentos que Transformam</h2>
+        <p class="text-[#64748b] mt-6 max-w-xl mx-auto text-base leading-relaxed">Cada tratamento é planejado de forma individualizada, unindo estética, funcionalidade e bem-estar duradouro.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="proc-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm fade-up fade-delay-1">
+          <div class="relative overflow-hidden h-52">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=400" alt="Clareamento Dental em Santa Bárbara d'Oeste" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy"/>
+            <div class="absolute top-4 left-4 bg-[#0ea5e9] text-white text-xs font-semibold px-3 py-1 rounded-full">Mais Procurado</div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-[#0f172a] mb-2">Clareamento Dental</h3>
+            <p class="text-[#64748b] text-sm leading-relaxed mb-4">Recupere a luminosidade natural do seu sorriso com protocolos seguros e resultados visíveis já na primeira sessão.</p>
+            <a href="https://wa.me/5519999999999?text=Olá,%20quero%20saber%20mais%20sobre%20clareamento%20dental" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-1 text-[#0ea5e9] text-sm font-semibold hover:gap-2 transition-all">
+              Saber mais
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="proc-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm fade-up fade-delay-2">
+          <div class="relative overflow-hidden h-52">
+            <img src="https://images.unsplash.com/photo-1599775816207-160f2501069e?q=80&w=400" alt="Implantes Dentários em SBO" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-[#0f172a] mb-2">Implantes Dentários</h3>
+            <p class="text-[#64748b] text-sm leading-relaxed mb-4">Soluções permanentes para substituição de dentes perdidos com aparência, sensação e função de dentes naturais.</p>
+            <a href="https://wa.me/5519999999999?text=Olá,%20quero%20saber%20mais%20sobre%20implantes" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-1 text-[#0ea5e9] text-sm font-semibold hover:gap-2 transition-all">
+              Saber mais
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="proc-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm fade-up fade-delay-3">
+          <div class="relative overflow-hidden h-52">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=400" alt="Ortodontia em Santa Bárbara d'Oeste" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-[#0f172a] mb-2">Ortodontia</h3>
+            <p class="text-[#64748b] text-sm leading-relaxed mb-4">Aparelhos fixos, móveis e alinhadores transparentes para corrigir a posição dos dentes com conforto e modernidade.</p>
+            <a href="https://wa.me/5519999999999?text=Olá,%20quero%20saber%20mais%20sobre%20ortodontia" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-1 text-[#0ea5e9] text-sm font-semibold hover:gap-2 transition-all">
+              Saber mais
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ DIFERENCIAIS ══════════════════════ -->
+  <section class="py-20 px-5 bg-[#f0f9ff]">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="fade-up">
+          <p class="text-[#0ea5e9] text-sm font-semibold tracking-widest uppercase mb-2">Por que escolher a Dra. Daniela</p>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-[#0f172a] mb-6 leading-tight">Muito além de um<br/>tratamento dentário</h2>
+          <p class="text-[#64748b] leading-relaxed mb-8">Com mais de uma década de prática clínica em Santa Bárbara d'Oeste, a Dra. Daniela construiu uma reputação baseada em resultados reais e no cuidado genuíno com cada paciente.</p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-[#0ea5e9]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-[#0ea5e9]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#0f172a]">Diagnóstico Digital Completo</h4>
+                <p class="text-[#64748b] text-sm mt-0.5">Radiografia digital, escâner intraoral e planejamento 3D para tratamentos precisos.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-[#0ea5e9]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-[#0ea5e9]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#0f172a]">Atendimento Humanizado</h4>
+                <p class="text-[#64748b] text-sm mt-0.5">Ambiente acolhedor, sem pressa e com total atenção às suas necessidades e expectativas.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-[#0ea5e9]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-[#0ea5e9]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#0f172a]">Parcelamento Facilitado</h4>
+                <p class="text-[#64748b] text-sm mt-0.5">Condições especiais para que o sorriso dos seus sonhos caiba no seu orçamento.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="fade-up fade-delay-2 relative">
+          <div class="absolute -top-4 -left-4 w-24 h-24 bg-[#0ea5e9]/10 rounded-full"></div>
+          <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-[#0ea5e9]/20 rounded-full"></div>
+          <img src="https://images.unsplash.com/photo-1512356538183-189676e885c3?q=80&w=400" alt="Paciente satisfeita com sorriso bonito" class="relative z-10 rounded-2xl w-full object-cover shadow-xl h-80 sm:h-96" loading="lazy"/>
+          <div class="absolute bottom-6 left-6 z-20 bg-white rounded-xl p-4 shadow-lg max-w-[200px]">
+            <div class="stars text-xs mb-1"></div>
+            <p class="text-[#0f172a] text-xs font-semibold">Nota 5,0 no Google</p>
+            <p class="text-[#64748b] text-xs">+200 avaliações</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ DEPOIMENTOS ══════════════════════ -->
+  <section id="depoimentos" class="py-20 px-5 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 fade-up">
+        <p class="text-[#0ea5e9] text-sm font-semibold tracking-widest uppercase mb-2">Histórias Reais</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-[#0f172a] accent-line">O que nossos pacientes dizem</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Depoimento 1 -->
+        <div class="bg-[#f8fafc] rounded-2xl p-6 border border-slate-100 fade-up fade-delay-1">
+          <div class="stars text-sm mb-4"></div>
+          <p class="text-[#334155] text-sm leading-relaxed mb-6 italic">"Sempre tive vergonha do meu sorriso por causa da cor dos dentes. Depois do clareamento com a Dra. Daniela, minha autoestima mudou completamente. O resultado foi incrível e o atendimento, impecável desde o primeiro dia."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#0ea5e9]/20 flex items-center justify-center text-[#0ea5e9] font-bold text-sm flex-shrink-0">MC</div>
+            <div>
+              <p class="font-semibold text-[#0f172a] text-sm">Mariana Costa</p>
+              <p class="text-[#94a3b8] text-xs">Professora · SBO</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-[#f8fafc] rounded-2xl p-6 border border-slate-100 fade-up fade-delay-2">
+          <div class="stars text-sm mb-4"></div>
+          <p class="text-[#334155] text-sm leading-relaxed mb-6 italic">"Fiz meu implante há dois anos e até hoje parece um dente natural. A Dra. Daniela me explicou cada etapa do processo com muita clareza. Fica a indicação para quem procura qualidade em Santa Bárbara d'Oeste."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#0ea5e9]/20 flex items-center justify-center text-[#0ea5e9] font-bold text-sm flex-shrink-0">RS</div>
+            <div>
+              <p class="font-semibold text-[#0f172a] text-sm">Ricardo Santos</p>
+              <p class="text-[#94a3b8] text-xs">Empresário · SBO</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-[#f8fafc] rounded-2xl p-6 border border-slate-100 fade-up fade-delay-3">
+          <div class="stars text-sm mb-4"></div>
+          <p class="text-[#334155] text-sm leading-relaxed mb-6 italic">"Levei minha filha para fazer o aparelho e fiquei encantada com a estrutura da clínica e com o cuidado da Dra. Daniela. Ela conquistou a confiança da minha filha já na primeira consulta. Recomendo de olhos fechados!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#0ea5e9]/20 flex items-center justify-center text-[#0ea5e9] font-bold text-sm flex-shrink-0">FO</div>
+            <div>
+              <p class="font-semibold text-[#0f172a] text-sm">Fernanda Oliveira</p>
+              <p class="text-[#94a3b8] text-xs">Mãe de Paciente · SBO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CTA FINAL ══════════════════════ -->
+  <section class="py-20 px-5 bg-[#0ea5e9]">
+    <div class="max-w-2xl mx-auto text-center fade-up">
+      <p class="text-white/80 text-sm font-medium tracking-widest uppercase mb-3">Dê o próximo passo</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">Seu novo sorriso começa com uma conversa</h2>
+      <p class="text-white/80 text-base mb-10 leading-relaxed">Agende agora sua avaliação gratuita. Atendemos em Santa Bárbara d'Oeste e região. Resposta rápida via WhatsApp.</p>
+      <a href="https://wa.me/5519999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20gratuita%20com%20a%20Dra.%20Daniela" target="_blank" rel="noopener"
+        class="inline-flex items-center gap-3 bg-white text-[#0ea5e9] font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 hover:scale-105">
+        <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Avalição Gratuita pelo WhatsApp
+      </a>
+      <p class="text-white/60 text-xs mt-5">Sem compromisso · Resposta em minutos · Atendemos presencialmente em SBO</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer class="bg-[#0f172a] text-white/60 py-10 px-5">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+      <div>
+        <p class="font-display text-white text-lg font-semibold mb-3">Dra. Daniela Lima</p>
+        <p class="text-sm leading-relaxed">Odontologia especializada em Santa Bárbara d'Oeste com tecnologia, ética e cuidado genuíno.</p>
+      </div>
+      <div>
+        <p class="text-white text-sm font-semibold mb-3">Especialidades</p>
+        <ul class="space-y-1 text-sm">
+          <li>Clareamento Dental</li>
+          <li>Implantes Dentários</li>
+          <li>Ortodontia</li>
+          <li>Estética do Sorriso</li>
+          <li>Dentística Restauradora</li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white text-sm font-semibold mb-3">Contato & Localização</p>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#0ea5e9] flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Santa Bárbara d'Oeste – SP
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#0ea5e9] flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Seg–Sex: 8h–18h | Sáb: 8h–12h
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#0ea5e9] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            (19) 99999-9999
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 text-center text-xs">
+      <p>© 2025 Dra. Daniela Lima Odontologia · CRO-SP XXXXXX · Santa Bárbara d'Oeste, SP</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════ WHATSAPP FLOAT ══════════════════════ -->
+  <a href="https://wa.me/5519999999999?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener"
+    class="wa-float fixed bottom-6 right-5 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#1ebe5d] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-200 hover:scale-110"
+    aria-label="Agendar pelo WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- ══════════════════════ JS ══════════════════════ -->
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('nav-scrolled');
+        nav.querySelectorAll('.text-white, .font-display').forEach(el => {
+          if (!el.classList.contains('text-\\[\\#0ea5e9\\]')) {
+            el.classList.add('text-slate-800');
+            el.classList.remove('text-white');
+          }
+        });
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // IntersectionObserver fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
